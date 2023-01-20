@@ -1,0 +1,22 @@
+{
+  "common.name": "Name",
+  "common.email": "Email",
+  "common.password": "Password",
+  "common.role": "Role",
+  "common.action": "Action",
+  "common.description": "Description",
+  "common.active": "Active",
+  "common.inactive": "Inactive",
+  "common.actions": "Actions",
+  "common.delete": "Delete",
+  "common.edit": "Edit",
+  "common.descend": "Descend",
+  "button.login": "Login",
+  "button.reset": "Reset",
+  "button.submit": "Submit",
+  "sidebar.dashboard": "Dashboard",
+  "sidebar.users": "Users",
+  "sidebar.userGroups": "User Groups",
+  "sidebar.companies": "Companies",
+  "sidebar.isActive": "Is Active"
+}

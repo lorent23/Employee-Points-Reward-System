@@ -1,0 +1,38 @@
+{
+  "name": "ip-track-fe",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.8.0",
+    "@reduxjs/toolkit": "^1.9.1",
+    "antd": "^5.1.0",
+    "axios": "^1.2.1",
+    "i18next": "^22.4.6",
+    "i18next-browser-languagedetector": "^7.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^12.1.1",
+    "react-query": "^3.39.2",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.6.1",
+    "sass": "^1.57.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "@vitejs/plugin-react": "^3.0.0",
+    "autoprefixer": "^10.4.13",
+    "classnames": "^2.3.2",
+    "postcss": "^8.4.20",
+    "prettier": "2.8.1",
+    "prettier-plugin-tailwindcss": "^0.2.1",
+    "tailwindcss": "^3.2.4",
+    "vite": "^4.0.0"
+  }
+}
