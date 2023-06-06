@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import { ConfigProvider } from "antd";
 import { QueryClient, QueryClientProvider } from "react-query";
-import { ReactQueryDevtools } from "react-query/devtools";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+// import { ReactQueryDevtools } from "react-query/devtools";
 import Router from "./router/index.jsx";
 
 const queryClient = new QueryClient({
@@ -11,9 +13,9 @@ const queryClient = new QueryClient({
       refetchOnWindowFocus: false,
     },
     globals: {
-      // ToDo: add toaster here
       onError: (error) => {
         console.log(error);
+        toast.error(error.message);
       },
     },
   },
@@ -22,10 +24,9 @@ const queryClient = new QueryClient({
 function App() {
   const [primaryColor, setPrimaryColor] = useState("green");
 
-  // Whitelabel logic. We will get values like 'primary/ secondary color' from the API
   useEffect(() => {
     const changeColor = setTimeout(() => {
-      const pColor = "#535bf2";
+      const pColor = "#535bf1";
       const root = document.querySelector(":root");
       root.style.setProperty("--primary-color", pColor);
       setPrimaryColor(pColor);
@@ -42,8 +43,9 @@ function App() {
           },
         }}
       >
+        <ToastContainer />
         <Router />
-        <ReactQueryDevtools initialIsOpen={false} />
+        {/* <ReactQueryDevtools initialIsOpen={false} /> */}
       </ConfigProvider>
     </QueryClientProvider>
   );

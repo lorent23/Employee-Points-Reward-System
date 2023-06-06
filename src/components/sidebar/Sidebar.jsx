@@ -1,5 +1,8 @@
 import React, {useEffect, useState} from "react";
-import { Layout, Menu } from "antd";
+import { Layout, Menu,} from "antd";
+import {
+  FundOutlined 
+} from "@ant-design/icons";
 import sidebarItems from "./sidebarItems.js";
 import {useLocation, useNavigate} from "react-router-dom";
 
@@ -10,7 +13,7 @@ const Sidebar = () => {
   const navigate = useNavigate();
 
   const [defaultSelectedKeys, setDefaultSelectedKeys] = useState([]);
-  const [collapsed, setCollapsed] = useState(false); //ToDo Place this variable in redux to be able to change it from other components
+  const [collapsed, setCollapsed] = useState(false);
 
   const [title, setTitle] = useState(null);
 
@@ -45,11 +48,13 @@ const Sidebar = () => {
       >
         <div
             style={{
-              height: 32,
-              margin: 16,
+              height: 30,
+              margin: 6,
+              padding: 5,
             }}
         >
-          {title || "Geko"}
+          <FundOutlined />
+          {title || "FIRST"}
         </div>
         <Menu
             className="sidebar-menu"

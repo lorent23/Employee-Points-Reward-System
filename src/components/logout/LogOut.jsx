@@ -8,6 +8,7 @@ const LogOut = () => {
 
     const onLogout = () => {
         dispatch(logout())
+        window.location.reload(false)
     }
 
     return (

@@ -17,10 +17,13 @@
     "i18next-browser-languagedetector": "^7.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-export-excel": "^0.5.3",
+    "react-export-table-to-excel": "^1.0.6",
     "react-i18next": "^12.1.1",
     "react-query": "^3.39.2",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.6.1",
+    "react-toastify": "^9.1.2",
     "sass": "^1.57.1"
   },
   "devDependencies": {

@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { Layout, Avatar, Dropdown, Space } from "antd";
+import { Layout, Avatar, Dropdown, Button } from "antd";
 import cn from "classnames";
+import {Link} from "react-router-dom";
 import LogOut from "../logout/LogOut";
+import ForgotPassword from "../forgottenpassword/ForgottenPassword";
 import { useLocation } from "react-router-dom";
-
-// Header value(s) should be saved on redux. It would be best if we rendered components instead of simple text
-//ToDo implement portals
 
 const Header = () => {
   const [title, setTitle] = useState(null);
   const location = useLocation();
+  
 
   useEffect(() => {
     setTitle(location.state?.title);
@@ -20,15 +20,11 @@ const Header = () => {
   const items = [
     {
       key: "1",
-      label: <p>Settings</p>,
+      label: <Button><a href="/forgotten-password">Reset Password</a></Button>,
     },
     {
       key: "2",
-      label: <LogOut />,
-    },
-    {
-      key: "3",
-      label: <p>Dashboard</p>,
+      label: <Button><LogOut/></Button>,
     },
   ];
 
@@ -46,7 +42,7 @@ const Header = () => {
           "items-center"
         )}
       >
-        <span> {title || "Geko"}</span>
+        <span> {title || "Welcome to First Points System"}</span>
         <Dropdown
           menu={{
             items,
@@ -54,7 +50,7 @@ const Header = () => {
           placement="bottomRight"
         >
           <Avatar className="ml-5 inline-flex cursor-pointer justify-items-end">
-            SuperA
+            PROFILE
           </Avatar>
         </Dropdown>
       </Header>

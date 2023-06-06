@@ -1,7 +1,9 @@
 import React from "react";
 import { Button, Form, Input } from "antd";
+import {Link} from "react-router-dom";
 import { useLogin } from "../services/AuthService.js";
 import {useTranslation} from "react-i18next";
+import { Image } from 'antd';
 
 const Login = () => {
     const { mutate: login } = useLogin();
@@ -26,14 +28,18 @@ const Login = () => {
             }}
             onFinish={onFinish}
             autoComplete="off"
-        >
+        >   
+            <Image src="/src/assets/images/logoFirst.png"
+            preview={false}
+            style={{ marginLeft: '80px' }} width={200} />
+            
             <Form.Item
                 label={t("common.email")}
                 name="email"
                 rules={[
                     {
                         required: true,
-                        message: "Please input your username!",
+                        message: "Please input your email!",
                     },
                 ]}
             >
@@ -51,6 +57,14 @@ const Login = () => {
                 ]}
             >
                 <Input.Password />
+            </Form.Item>
+
+            <Form.Item 
+              wrapperCol={{
+                offset: 8,
+                span: 16,
+            }}>
+            <Link to="/forgotten-password">Forgot Password</Link>
             </Form.Item>
 
             <Form.Item

@@ -1,10 +1,15 @@
 {
-  "common.name": "Name",
+  "common.firstName": "Name",
+  "common.id": "id",
+  "common.points": "piket",
+  "common.pointsType": "Points Type",
+  "common.lastName": "Surname",
   "common.email": "Email",
   "common.password": "Password",
   "common.role": "Role",
   "common.action": "Action",
   "common.description": "Description",
+  "common.isVerified": "Is Verified",
   "common.active": "Active",
   "common.inactive": "Inactive",
   "common.actions": "Actions",
@@ -18,5 +23,11 @@
   "sidebar.users": "Users",
   "sidebar.userGroups": "User Groups",
   "sidebar.companies": "Companies",
-  "sidebar.isActive": "Is Active"
+  "sidebar.isActive": "Is Active",
+  "sidebar.points": "Points",
+  "common.numberOfPoints": "Points",
+  "common.createdAt": "Added at",
+  "common.exhangeRate": "Exchange Rate",
+  "common.totalPoints": "Total Points",
+  "common.value": "Value in LEK"
 }

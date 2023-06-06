@@ -32,7 +32,7 @@ const DefaultLayout = ({ children }) => {
           {/*ToDo: Create and add styled loading spinner component*/}
           <Suspense fallback={<Spinner />}>{children}</Suspense>
         </Content>
-        <div style={{ textAlign: "center" }}>Geko ©2023</div>
+        <div style={{ textAlign: "center" }}>FIRST ©2023</div>
       </Layout>
     </Layout>
   );
